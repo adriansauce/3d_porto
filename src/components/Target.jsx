@@ -3,9 +3,12 @@ import { useGLTF } from '@react-three/drei';
 import gsap from 'gsap';
 
 export const Target = (props) => {
-    const targetRef = useRef();
-    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/tree-beech/model.gltf');
-    
+    // const targetRef = useRef();
+    // const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/tree-beech/model.gltf');
+    return <mesh scale={0.1}>
+  <boxGeometry />
+  <meshStandardMaterial color="white" />
+    </mesh>
     useEffect(() => {
         // Set initial position
         if (targetRef.current) {
